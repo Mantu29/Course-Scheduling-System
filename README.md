@@ -60,7 +60,7 @@ Maximize the total preference score of professors for assigned time slots and cl
 1. **No Overlapping Courses for Students:**
    For any two courses `i_1` and `i_2` with common students, they cannot be scheduled at the same time.
 
-∑_{k} x_{i_1,k,t} + ∑_{k} x_{i_2,k,t} ≤ 1 ∀ t, if i_1 and i_2 have common students
+$$ ∑_{k} x_{i_1,k,t} + ∑_{k} x_{i_2,k,t} ≤ 1 ∀ t, if i_1 and i_2 have common students$$
 
 
 2. **Single Course per Classroom per Time Slot:**
