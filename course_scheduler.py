@@ -118,7 +118,6 @@ course_students = student_courses_df.groupby('Course')['Student'].apply(list).to
 for i1, i2 in itertools.combinations(course_students.keys(), 2):
     overlapping_students = set(course_students[i1]) & set(course_students[i2])
     if overlapping_students:
-        print(overlapping_students, i1, i2)
         for t in time_slots:
             model.addConstr(gp.quicksum(x[i1, k, t] for k in classrooms) + gp.quicksum(x[i2, k, t] for k in classrooms) <= 1, f"No_Same_Time_Slot_Overlap_{i1}_{i2}_{t}_Constraint")
 
@@ -147,7 +146,6 @@ for i in courses:
 
 for i in courses:
     enrolled_students = students_per_course.loc[students_per_course['Course'].str.strip().str.lower() == i.strip().lower(), 'EnrolledStudents'].values[0]
-    print(enrolled_students)
     for k in classrooms:
         classroom_capacity = classroom_capacities_df.loc[classroom_capacities_df['Classroom'] == k, 'Capacity'].values[0]
         for t in time_slots:
