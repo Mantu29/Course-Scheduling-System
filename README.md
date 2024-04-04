@@ -53,7 +53,7 @@ Example for "Classroom Capacities":
 Maximize the total preference score of professors for assigned time slots and classrooms for their courses, ensuring an optimal schedule that respects professor preferences as much as possible.
 
 ### Decision Variables
-$$ x_{i,k,t} $$: Binary variable that is 1 if course $$ i $$ is scheduled in classroom $$ k $$ during time slot $$ t $$, and 0 otherwise.
+$x_{i,k,t} $: Binary variable that is 1 if course $ i $ is scheduled in classroom $ k $ during time slot $ t $, and 0 otherwise.
 
 ### Constraints
 
