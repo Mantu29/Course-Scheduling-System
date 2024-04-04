@@ -47,40 +47,38 @@ Example for "Classroom Capacities":
 | Room 102       | 25       |
 | ...            | ...      |
 
-## Mathematical Formulation
-
 ### Objective Function
 Maximize the total preference score of professors for assigned time slots and classrooms for their courses, ensuring an optimal schedule that respects professor preferences as much as possible.
 
 ### Decision Variables
-`x_{i,k,t}`: Binary variable that is 1 if course `i` is scheduled in classroom `k` during time slot `t`, and 0 otherwise.
+$x_{i,k,t}$: Binary variable that is 1 if course $i$ is scheduled in classroom $k$ during time slot $t$, and 0 otherwise.
 
 ### Constraints
 
 1. **No Overlapping Courses for Students:**
-   For any two courses `i_1` and `i_2` with common students, they cannot be scheduled at the same time.
-   `sum(k) x_{i_1,k,t} + sum(k) x_{i_2,k,t} <= 1 for all t, if i_1 and i_2 have common students`
+   For any two courses $i_1$ and $i_2$ with common students, they cannot be scheduled at the same time.
+   $\sum_{k} x_{i_1,k,t} + \sum_{k} x_{i_2,k,t} \leq 1 \quad \forall t, \text{if } i_1 \text{ and } i_2 \text{have common students}$
 
 2. **Single Course per Classroom per Time Slot:**
    Each classroom can host at most one course at any time slot.
-   `sum(i) x_{i,k,t} <= 1 for all k, for all t`
+   $\sum_{i} x_{i,k,t} \leq 1 \quad \forall k, \forall t$
 
 3. **Course Scheduling:**
    Each course must be scheduled exactly once during the planning period.
-   `sum(k)sum(t) x_{i,k,t} = 1 for all i`
+   $\sum_{k}\sum_{t} x_{i,k,t} = 1 \quad \forall i$
 
 4. **Professor Preferences:**
    A course can only be scheduled in a time slot if the professor's preference for that slot is not zero.
-   `x_{i,k,t} <= preference of professor for course i at time t for all i, for all k, for all t`
+   $x_{i,k,t} \leq \text{preference of professor for course } i \text{ at time } t \quad \forall i, \forall k, \forall t$
 
 5. **Classroom Capacity:**
    The number of students enrolled in a course cannot exceed the capacity of the assigned classroom.
-   `x_{i,k,t} * enrolled students in course i <= capacity of classroom k for all i, for all k, for all t`
+   $x_{i,k,t} \times \text{enrolled students in course } i \leq \text{capacity of classroom } k \quad \forall i, \forall k, \forall t$
 
 ### Variables
-- `i`: Index for courses.
-- `k`: Index for classrooms.
-- `t`: Index for time slots.
+- $i$: Index for courses.
+- $k$: Index for classrooms.
+- $t$: Index for time slots.
 
 
 ## Getting Started
