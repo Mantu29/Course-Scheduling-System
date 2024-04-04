@@ -50,6 +50,8 @@ Example for "Classroom Capacities":
 ### Objective Function
 Maximize the total preference score of professors for assigned time slots and classrooms for their courses, ensuring an optimal schedule that respects professor preferences as much as possible.
 
+$\text{Maximize} \quad \sum_{i} \sum_{k} \sum_{t} x_{i,k,t} \times \text{{preference}}_{i,t}$
+
 ### Decision Variables
 $x_{i,k,t}$: Binary variable that is 1 if course $i$ is scheduled in classroom $k$ during time slot $t$, and 0 otherwise.
 
