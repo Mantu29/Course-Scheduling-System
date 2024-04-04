@@ -86,9 +86,9 @@ def data_processing(term_1_excelFilePath, term_2_excelFilePath, professor_prefFi
     return professor_preferences_df, student_courses_df, student_ids, student_courses
 
 # Example usage of the function with file paths
-file_path_1 = r"Path\To\Term1.xlsx"
-file_path_2 = r"Path\To\Term2.xlsx"
-prof_file_path = r"Path\To\ProfessorPreferences.xlsx"
+file_path_1 = r"Term1.xlsx"
+file_path_2 = r"Term2.xlsx"
+prof_file_path = r"ProfessorPreferences.xlsx"
 
 # Function call with example file paths
 professor_preferences_df, student_courses_df, student_ids, student_courses = data_processing(file_path_1, file_path_2, prof_file_path)
