@@ -57,7 +57,7 @@ $x_{i,k,t}$: Binary variable that is 1 if course $i$ is scheduled in classroom $
 
 1. **No Overlapping Courses for Students:**
    For any two courses $i_1$ and $i_2$ with common students, they cannot be scheduled at the same time.
-   $\sum_{k} x_{i_1,k,t} + \sum_{k} x_{i_2,k,t} \leq 1 \quad \forall t, \text{if } i_1 \text{ and } i_2 \text{have common students}$
+   $\sum_{k} x_{i_1,k,t} + \sum_{k} x_{i_2,k,t} \leq 1 \quad \forall t, \text{if } i_1 \text{ and } i_2 \text{ have common students}$
 
 2. **Single Course per Classroom per Time Slot:**
    Each classroom can host at most one course at any time slot.
