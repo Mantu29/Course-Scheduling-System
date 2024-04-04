@@ -86,7 +86,7 @@ $x_{i,k,t}$: Binary variable that is 1 if course $i$ is scheduled in classroom $
 ## Getting Started
 - Ensure that all required datasets are prepared according to the specified formats.
 - Update the file paths in the code to point to your datasets.
-- Run the scheduling system to generate the course schedules.
+- Run the course_scheduler.py to generate the course schedules.
 
 ## Dependencies
 Install all required dependencies using the `requirements.txt` file provided in the project:
