@@ -31,8 +31,8 @@ The professor preferences should be provided in an Excel file with the following
 Example for "Professor Preferences":
 | Sl. No | Professor Name | Course list       | Option 1 | Option 2 | Option 3 |
 |--------|----------------|-------------------|----------|----------|----------|
-| 1      | Dr. Alice      | Introduction to AI| 1, 2     | 3, 4     | 5        |
-| 2      | Dr. Bob        | Advanced Robotics | 2, 3     | 1, 4     | 6        |
+| 1      | Dr. Alice      | Introduction to AI| 1        | 3        | 5        |
+| 2      | Dr. Bob        | Advanced Robotics | 2        | 1        | 6        |
 | ...    | ...            | ...               | ...      | ...      | ...      |
 
 ### 3. **Classroom Capacities** (Optional)
